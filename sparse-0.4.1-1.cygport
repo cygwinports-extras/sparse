@@ -1,0 +1,16 @@
+DESCRIPTION="C semantic parser"
+HOMEPAGE="http://www.kernel.org/pub/software/devel/sparse/"
+SRC_URI="http://www.kernel.org/pub/software/devel/sparse/dist/${P}.tar.gz"
+
+MAKEOPTS+=" OS=cygwin PREFIX=/usr"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+}
+
+src_test() {
+	cd ${B}
+	cygmake -j1 -k check || true
+}

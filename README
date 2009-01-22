@@ -1,0 +1,83 @@
+sparse
+------------------------------------------
+Sparse, the semantic parser, provides a compiler frontend capable of 
+parsing most of ANSI C as well as many GCC extensions, and a collection 
+of sample compiler backends, including a static analyzer also called 
+'sparse'. Sparse provides a set of annotations designed to convey 
+semantic information about types, such as what address space pointers 
+point to, or what locks a function acquires or releases.
+
+Runtime requirements:
+  cygwin-1.5.25-15
+  libxml2-2.7.2-1
+  gcc-core
+  perl
+
+Build requirements:
+(besides corresponding -devel packages)
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+  pkg-config-0.23a-2
+
+Canonical website:
+  http://www.kernel.org/pub/software/devel/sparse/
+
+Canonical download:
+  http://www.kernel.org/pub/software/devel/sparse/dist/
+
+-------------------------------------------
+
+Build instructions:
+  unpack sparse-0.4.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./sparse-0.4.1-X.cygport all
+
+This will create:
+  /usr/src/sparse-0.4.1-X-src.tar.bz2
+  /usr/src/sparse-0.4.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/c2xml.exe
+  /usr/bin/cgcc
+  /usr/bin/sparse.exe
+  /usr/include/sparse/allocate.h
+  /usr/include/sparse/bitmap.h
+  /usr/include/sparse/compat.h
+  /usr/include/sparse/dissect.h
+  /usr/include/sparse/expression.h
+  /usr/include/sparse/flow.h
+  /usr/include/sparse/ident-list.h
+  /usr/include/sparse/lib.h
+  /usr/include/sparse/linearize.h
+  /usr/include/sparse/parse.h
+  /usr/include/sparse/ptrlist.h
+  /usr/include/sparse/scope.h
+  /usr/include/sparse/storage.h
+  /usr/include/sparse/symbol.h
+  /usr/include/sparse/target.h
+  /usr/include/sparse/token.h
+  /usr/lib/libsparse.a
+  /usr/lib/pkgconfig/sparse.pc
+  /usr/share/doc/sparse-0.4.1/FAQ
+  /usr/share/doc/sparse-0.4.1/LICENSE
+  /usr/share/doc/sparse-0.4.1/README
+  /usr/share/man/man1/cgcc.1.gz
+  /usr/share/man/man1/sparse.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 0.4.1-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/
